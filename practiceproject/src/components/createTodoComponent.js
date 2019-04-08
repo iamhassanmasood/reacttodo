@@ -6,6 +6,8 @@ constructor(){
     super();
 
     this.todoDescriptionHandler =this.todoDescriptionHandler.bind(this);
+    this.todoResponsibleHandler =this.todoResponsibleHandler.bind(this);
+    this.todopriorityHandler =this.todopriorityHandler.bind(this);
 
   this.state = {
         todoDescription:"",
