@@ -5,10 +5,10 @@ export default class CreateTodo extends Component {
 constructor(){
     super();
 
-    this.todoDescriptionHandler =this.todoDescriptionHandler.bind(this);
-    this.todoResponsibleHandler =this.todoResponsibleHandler.bind(this);
-    this.todopriorityHandler =this.todopriorityHandler.bind(this);
-
+    this.todoDescriptionHandler = this.todoDescriptionHandler.bind(this);
+    this.todoResponsibleHandler = this.todoResponsibleHandler.bind(this);
+    this.todopriorityHandler = this.todopriorityHandler.bind(this);
+    this.onSubmitTodo= this.onSubmitTodo.bind(this);
   this.state = {
         todoDescription:"",
         todoResponsible:"",
