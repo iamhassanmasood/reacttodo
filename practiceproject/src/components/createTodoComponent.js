@@ -101,6 +101,7 @@ export default class CreateTodo extends Component {
               <label> High </label>
             </div>
           </div>
+          <input type="submit" value="Create ToDo" className="btn btn-primary"/>
         </form>
       </div>
     )
