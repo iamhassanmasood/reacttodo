@@ -7,13 +7,28 @@ constructor(){
   this.state = {
         todoDescription:"",
         todoResponsible:"",
-        todoPriiority:"",
+        todoPriority:"",
         todoCompleted:false
     }
 }
-todoResponsibleHandler= ()=>{
-  
+todoDescriptionHandler= (event)=>{
+  this.setState({
+    todoDescription: event.target.value,
+  })
 }
+
+todoPriorityHandler= (event)=>{
+  this.setState({
+    todoPriority: event.target.value,
+  })
+}
+
+todoResponsibleHandler= (event)=>{
+  this.setState({
+    todoResponsible: event.target.value,
+  })
+}
+
   render() {
     return (
       <div>
