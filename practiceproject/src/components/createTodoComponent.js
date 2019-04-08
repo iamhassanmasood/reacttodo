@@ -53,7 +53,17 @@ export default class CreateTodo extends Component {
               onChange={this.todoDescriptionHandler}
             />
           </div>
-
+          <div className="form-group">
+            <label>Responsible: </label>
+            <input
+              className="form-check-input"
+              type="text"
+              className="form-control"
+              value={this.state.todoResponsible}
+              onChange={this.todoResponsibleHandler}
+            />
+          </div>
+          
         </form>
       </div>
     )
