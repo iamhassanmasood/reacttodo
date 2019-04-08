@@ -4,6 +4,9 @@ export default class CreateTodo extends Component {
 
 constructor(){
     super();
+
+    this.todoDescriptionHandler =this.todoDescriptionHandler.bind(this);
+
   this.state = {
         todoDescription:"",
         todoResponsible:"",
@@ -23,10 +26,14 @@ todoPriorityHandler= (event)=>{
   })
 }
 
-todoResponsibleHandler= (event)=>{
+todoResponsibleHandler= (event) => {
   this.setState({
     todoResponsible: event.target.value,
   })
+}
+
+onSubmitTodo = (e) => {
+  e.preventDefault();
 }
 
   render() {
