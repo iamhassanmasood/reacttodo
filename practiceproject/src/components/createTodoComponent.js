@@ -63,7 +63,9 @@ export default class CreateTodo extends Component {
               onChange={this.todoResponsibleHandler}
             />
           </div>
-          
+          <div className="form-group">
+
+          </div>
         </form>
       </div>
     )
