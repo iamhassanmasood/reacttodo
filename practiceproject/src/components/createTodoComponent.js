@@ -11,7 +11,9 @@ constructor(){
         todoCompleted:false
     }
 }
-
+todoResponsibleHandler= ()=>{
+  
+}
   render() {
     return (
       <div>
