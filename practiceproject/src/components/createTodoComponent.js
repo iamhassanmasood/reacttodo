@@ -9,12 +9,12 @@ export default class CreateTodo extends Component {
     this.todoResponsibleHandler = this.todoResponsibleHandler.bind(this);
     this.todoPriorityHandler = this.todoPriorityHandler.bind(this);
     this.onSubmitTodo = this.onSubmitTodo.bind(this);
-    this.state = {
+    this.state = ({
       todoDescription: "",
       todoResponsible: "",
       todoPriority: "",
       todoCompleted: false
-    }
+    })
   }
   todoDescriptionHandler = (event) => {
     this.setState({
@@ -36,6 +36,19 @@ export default class CreateTodo extends Component {
 
   onSubmitTodo = (e) => {
     e.preventDefault();
+
+    console.log("Form Submitted");
+    console.log(`ToDo Description ${this.state.todoDescription}`);
+    console.log(`ToDo Responsible ${this.state.todoResponsible}`);
+    console.log(`ToDo Priority ${this.state.todoPriority}`);
+    console.log(`ToDo Completed ${this.state.todoCompleted}`);
+
+    this.setState({
+      todoDescription: "",
+      todoResponsible: "",
+      todoPriority: "",
+      todoCompleted: false
+    })
   }
 
   render() {
@@ -64,7 +77,7 @@ export default class CreateTodo extends Component {
             />
           </div>
           <div className="form-group">
-          <div className="form-check form-check-inline">
+            <div className="form-check form-check-inline">
               <input
                 className="form-check-input"
                 type="radio"
@@ -101,7 +114,9 @@ export default class CreateTodo extends Component {
               <label> High </label>
             </div>
           </div>
-          <input type="submit" value="Create ToDo" className="btn btn-primary"/>
+          <div className="form-group">
+            <input type="submit" value="Create ToDo" className="btn btn-primary" />
+          </div>
         </form>
       </div>
     )
