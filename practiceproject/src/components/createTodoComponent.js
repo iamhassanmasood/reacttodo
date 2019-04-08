@@ -88,7 +88,18 @@ export default class CreateTodo extends Component {
               />
               <label> Medium </label>
             </div>
-
+            <div className="form-check form-check-inline">
+              <input
+                className="form-check-input"
+                type="radio"
+                name="priorityOptions"
+                id="high"
+                value="high"
+                checked={this.state.todoPriority === "high"}
+                onChange={this.todoPriorityHandler}
+              />
+              <label> High </label>
+            </div>
           </div>
         </form>
       </div>
