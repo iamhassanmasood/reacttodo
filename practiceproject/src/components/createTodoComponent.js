@@ -16,6 +16,7 @@ export default class CreateTodo extends Component {
       todoCompleted: false
     })
   }
+  
   todoDescriptionHandler = (event) => {
     this.setState({
       todoDescription: event.target.value,
